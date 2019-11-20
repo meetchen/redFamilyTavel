@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  
+</head>
+<body>
+<style>
+    html{
+        width: 100%;
+        height: 100%;
+
+    }
+    .clearfix:after{
+	display:table;
+	content:"";
+	clear:both;
+    }
+    li{
+	list-style:none;
+    }
+    *{
+			margin:0px;
+			padding:0px;
+		}
+    .swiper{
+       background-color: white;
+        width: 460px;
+        height: 420px;
+  
+        margin: 80px auto;
+        left: 40px;
+        position: absolute;
+        overflow: hidden;
+        background-color: #d90b18;
+    }
+    .swiper ul{
+        width: 9999px;
+        margin-top: 50px; 
+        /* overflow: hidden; */
+        /*清除浮动*/
+        /*transition: 1s;*/
+    
+    }
+    .swiper li{
+        float: left;
+        width: 460px;
+        height: 320px;
+    }
+    /*按钮*/
+    .btn{
+        position: absolute;
+        top: 60%;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        
+        margin-top: -55px;
+        text-align: center;
+        line-height: 27px;
+        border-radius: 50%;
+        font-size: 26px;
+        color: #fff;
+        background: #666;
+        opacity: .5;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    .next{
+        left: 420px;
+    }
+    .transi{
+        transition: 500ms;
+    }
+    /*小圆点*/
+    ul.item{
+        width: 80px;
+        position: absolute;
+        bottom: 10px;
+        left: 55%;
+        transform: translateX(-50%);
+        /*清除浮动*/
+        /* overflow: hidden; */
+        z-index: 1000;
+    }
+    .item li{
+        float: left;
+        width: 7px;
+        height: 7px;
+        border: 1px solid rgb(158, 157, 157);
+        background: rgb(158, 157, 157);
+        border-radius: 50%;
+        margin: 0 3px;
+    }
+    li.active{
+        background: rgb(224, 218, 218);
+        width: 8px;
+        height: 8px;
+    }
+    .wordIntroudace{
+        width: 50%;
+        height: 100%;
+        float: left;
+        margin-left: 40%;
+        margin-top:30px;
+    }
+    .wordIntroudace div{
+        float: left;
+       
+    }
+    .spell{
+        width: 120px;
+        color: #d90b18;
+        height: 30px;
+        text-align: center;
+        font-size: 14px;
+        position: absolute;
+        margin-top: -40px;
+    }
+    .mainTiltle{
+        font-size: 40px;
+        width: 150px;
+     
+   
+        color:#d90b18;
+        font-weight: bolder;
+    }
+    .subtitle1,.subtitle2{
+        font-size: 20px;
+        margin-top:0px;
+        margin-bottom: 30px;
+        color:#d90b18;
+       
+    }
+
+    .num1,.num2{
+       
+        margin-top:30px;
+    }
+    .paragraph{
+        text-indent: 20px;
+        margin-top: 0px ;
+        color:#d90b18;
+        font-size: 13px;
+        line-height: 17px;
+        background-color: white;
+
+    }
+    .paragraph p{
+        margin:10px;
+        color:#b8000b;
+    }
+    .BottonBorder{
+    height: 8px;
+    width: 100%;
+    background-image: url(img/bottomtriangle.jpg);
+    }
+    .redTop{
+        height: 60px;
+        width: 100%;
+        background-color:#d90b18;
+    }
+   
+    .Tindex li{
+        float: left;
+        width: 14%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color: #d90b18;
+        position: relative;
+        top:-60px;
+        left:15%;
+    }
+    .Tindex li a{
+        color: white;
+        font-size: 17px;
+    }
+    .Tindex li:hover{
+    border-left:3px white dashed;
+    border-right:3px white dashed;
+    cursor: pointer;
+    height: 50px;
+    
+}
+.lastBorder{
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background-image: url(img/toptriangle.jpg);
+    margin-top:60%;
+}
+.picBorder{
+    height: 8px;
+    width: 100%;
+    background-image: url(img/toptriangle.jpg);
+    }
+.BpicBorder{
+    height: 8px;
+    width: 460px;
+    background-image: url(img/bottomtriangle.jpg);
+    position: absolute;
+    top: 615px;
+    left: 40px;
+   
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #666;
+    margin-top: 40px;
+}
+.fifth{
+    margin-top:60%;
+    width: 100%;
+    height: 190px;
+    background-color: #d90b18;
+}
+.FifthTitle{
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    margin-left: 32%;
+    height: 60px;
+    font-weight: bold;
+    line-height: 160px;
+}
+.FifthTitle span{
+   margin-left: 5%;
+   color:  rgb(235, 197, 197);
+}
+.FifthTitle p {
+    font-size: 20px;
+    color: rgb(235, 197, 197);
+    position: relative;
+    margin-top: -130px;
+    margin-left: -3%;
+}
+
+.LastBotton{
+    background-color: #b8000b;
+    width: 100%;
+    height: 100px;
+}
+.LastBotton p {
+    position: relative;
+    color: white;
+    margin-top: 30px;
+    margin-left:35%;
+    float: left;
+    line-height: 200%;
+}
+</style>
+<body>
+        <div class="Pbannar">
+                <div class="redTop"></div>
+                <div class="BottonBorder"></div>
+                <ul class="Tindex clearfix">
+                        <li><a href="placeJgs.html">井冈山</a></li>
+                        <li><a href="placeYa.html">延安</a></li>
+                        <li><a href="placeYm.html">沂蒙</a></li>
+                        <li><a href="placeMx.html">闽西</a></li>
+                        <li><a href="homepage.html">主页</a></li>
+                </ul>
+            </div>
+
+    <div class="wordIntroudace clearfix">
+        <div class="spell">[jǐng gāng shān]</div>
+        <div class="mainTiltle">
+            井冈山
+        </div>
+        <div class="line"></div>
+        <div class="num1 clearfix">
+            <div class="subtitle1">红色文化</div>
+            
+            <div class="PtopBorder"></div>
+            <div class="first paragraph"><p>1927年10月，毛泽东、朱德、陈毅、彭德怀、滕代远等老一辈无产阶级革命家率领中国工农红
+                    军来到井冈山，创建以宁冈县为中心中国第一个农村革命根据地，开辟了“以农村包围城市、武装夺取政权”的具有中国特色的革
+                    命道路，从此鲜为人知的井冈山被载入中国革命历史的光荣史册，被誉为“中国革命的摇篮”和“中华人民共和国的奠基石”。
+                    井冈山的斗争，从1927年10月到1930年2月为止，共计两年零四个月，时间虽不长，但为中国开辟了一条成功之路，尤其为
+                    后人留下宝贵的精神财富——井冈山精神；坚定信念，敢闯新路。其精髓是：一是坚定不移的理想信念；二是实事求是的思想路线；
+                    三是党管武装的基本原则；四是血肉相连的干群关系；五是艰苦奋斗的创业精神。迄今保存完好的井冈山斗争革命旧址遗迹达
+                    100多处，其中21处被列为中国重点文物保护单位。6处被列为省级重点文物保护单位，35处被列为市级文明保护单位。因此，
+                    井冈山作为中国爱国主义教育示范基地之一，也已成为进行革命传统教育和爱国主义教育的理想课堂。江泽民、胡锦涛、李克强
+                    等党和国家领导人分别到井冈山缅怀老一辈无产阶级革命家的丰功伟绩。</p>
+                    </div>
+            </div>
+            <div class="PButtomBorder"></div>
+       
+        <div class="num2 clearfix">
+                <div class="subtitle2">精神画传</div>
+               
+                <div class="PtopBorder"></div>
+                <div class="first paragraph"><p>
+                        在中国革命的史册上，在中国人民解放军的建军史上，井冈山都占有极其重要的地位。
+                        毛泽东和他的战友们在开辟井冈山根据地的斗争中，通过艰苦实践，摸索到了“农村包围城市、武装夺取政权”的正确道路
+                        ；明确了“支部建在连上”、“执行三大任务”的重要制度；制定了人民军队必须遵奉的“三大纪律六项注意”。后“三大纪律六项注意”
+                        经过充实，完善为“三大纪律八项注意”，至今仍为中国人民解放军每个成员的行动准则。但由于种种原因，井冈山斗争留下的文献不多，
+                        亲历者们撰写的回忆文章也不多。这就使得有关井冈山的记载，显得比较单薄，尤其缺少鲜活、生动、有血有肉的情节。
+                </p>
+                <p>
+                        有鉴于此，井冈山斗争亲历者们的后代——陈毅之子陈昊苏、罗荣桓之子罗东进、彭德怀的侄女彭钢、
+                        粟裕之子粟戎生、黄克诚之子黄煦、谭政之子谭竞先等90余人，约定各自执笔为文，记述前辈在井冈山的经历，并附以家中珍藏
+                        多年的照片，合为一册图文并茂的《井冈情怀》画传，由中央文献出版社出版。
+                </p>
+                <p>
+                        《井冈情怀》画传的作者中，除了开国元勋和将帅的后代以外，还包括牺牲在井冈山或
+                        是被错杀于井冈山的先烈的亲属。包括陈毅安的儿子、何挺颖的侄子，王佐、袁文才的重孙和孙子等。读他们的文章，
+                        能够使我们对井冈山斗争的艰巨性和复杂性，产生进一步的领悟。主编王太和与编委会成员们的设想是：这本画传要为读
+                        者提供从别的书中读不到的鲜为人知的故事，以及在纪念馆、展览馆里也难得一见的历史图片。经过大家共同努力，
+                        画传书稿在短时间内写就、编成，共收文章104篇，录入图片900余幅。党史界和军史界将井冈山精神的主要内容归纳
+                        为6句话，即：“坚定信念、艰苦奋斗、实事求是、敢闯新路、依靠群众、勇于胜利”。《井冈情怀》画传用一段段经历
+                        、一个个故事诠释了井冈山精神。
+                </p>
+            </div>
+         </div>
+         <div class="PButtomBorder"></div>
+   
+    </div>
+    
+    <div class="swiper">
+            <div class="picBorder"></div>
+        <!--图片区域-->
+        <ul class="imgBox">
+            <li><img src="img/jgs1.png" alt="" /></li>
+            <li><img src="img/jgs2.png" alt="" /></li>
+            <li><img src="img/jgs3.png" alt="" /></li>
+        </ul>
+        <!--左右按钮-->
+        <div class="btn pre">&lt;</div>
+        <div class="btn next">&gt;</div>
+        <!--小圆点-->
+        <ul class="item">
+            <!--<li class="active"></li>
+            <li></li>
+            <li></li>-->
+            
+        </ul>
+        
+    </div>
+    <div class="BpicBorder"></div>
+    <div class="lastBorder"></div>
+    <div class="fifth">
+            <div class="FifthTitle">
+                   <span>持续创新 相互信任 长期合作</span> 
+                    <p>Continuous Innovation, Mutual Trust and Long-term Cooperation</p>
+            </div>
+
+        </div>
+        <div class="LastBotton"><p> 开发团队：基于Python爬虫绘制知识图谱的“红色亲子游”项目组
+                <br>联系电话17729503929 西安科技大学计算机学院</p>
+            </div>
+        </div>
+    
+    <script type="text/javascript">
+        window.onload=function(){
+            let swiper = document.querySelector(".swiper"),
+                pre = swiper.querySelector(".pre"),
+                next = swiper.querySelector(".next"),
+                _ul = swiper.querySelector(".imgBox"),//图片ul
+                ali = _ul.querySelectorAll('li'),
+                aImg = swiper.querySelectorAll("li img"),
+                imgW = aImg[0].offsetWidth,//需要window.onload
+                index = 1,//计算滚动到哪张图片
+                isTransitioned = true,//判断动画是否已完成
+                item = swiper.querySelector('.item');
+            
+            //克隆第一张图片，添加到图片队列的最后面
+            let cloneLi = ali[0].cloneNode(true);
+            _ul.appendChild(cloneLi);
+            //克隆最后一张图片，添加到图片队列的最前面
+            let cloneLastLi = ali[ali.length-1].cloneNode(true);
+                //插入方法1：
+//              _ul.insertBefore(cloneLastLi,ali[0]);
+                //插入方法2
+            _ul.prepend(cloneLastLi);
+            
+            //点击右边按钮
+            next.addEventListener("click",()=>{
+                if(isTransitioned){
+                    index++;//先++再设置
+                    move();
+                    fenyeq(index);  
+                }
+            })
+            
+            
+            //初始化图片队列：
+            _ul.style.transform="translateX("+(-imgW*index)+"px)";
+            //点击左边按钮
+            pre.addEventListener("click",()=>{
+                if(isTransitioned){
+                    index--;
+                    move();
+                    fenyeq(index);
+                }
+            })
+            
+            setInterval(function(){
+                if(isTransitioned){
+                    index++;
+                    move();
+                    fenyeq(index);
+                }
+            },4000)
+            
+            //监听动画结束
+            _ul.addEventListener("transitionend",()=>{//给ul加了transi
+                if(index == aImg.length+1){//边界判断
+                    index = 1;
+                    _ul.classList.toggle("transi");//移除ul的transi
+                    _ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+                }
+                if(index==0){
+                    index=aImg.length;
+                    _ul.classList.toggle("transi");//移除ul的transi
+                    _ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+                }
+                isTransitioned = true;//每次动画结束都判断
+            })
+            
+            
+            //根据图片的张数生成分页器
+            for(let i=0;i<aImg.length;i++){
+                var newLi = document.createElement('li');
+                item.appendChild(newLi);
+            }
+            //第一个小圆点添加样式
+            item.children[0].classList.add('active');
+            //给分页器添加点击事件
+            for(let j=0;j<item.children.length;j++){
+                    item.children[j].addEventListener('click',()=>{
+                        for(let q=0;q<item.children.length;q++){
+                            item.children[q].classList.remove('active');
+                        }
+                        item.children[j].classList.add('active');
+                        index = j+1;
+                        _ul.classList.add('transi');
+                        _ul.style.transform="translateX("+(-imgW*index)+"px)";
+                    })
+                }
+            //点击左右按钮分页器跟随
+            function fenyeq(index){
+                for(let k=0;k<item.children.length;k++){
+                    item.children[k].classList.remove('active');
+                }
+                index = index -1;
+                index = index==item.children.length?0:index;//左按钮边界
+                index = index<0?item.children.length-1:index;//右按钮边界
+                item.children[index].classList.add('active');
+            }
+            
+            function move(){
+                _ul.classList.add("transi");
+                _ul.style.transform="translateX("+(-imgW*index)+"px)";
+                isTransitioned = false;
+            }
+    }
+
+        
+    </script>
+
+</body>
+</html>

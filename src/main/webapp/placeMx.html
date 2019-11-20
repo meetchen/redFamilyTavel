@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+<style>
+    *{
+			margin:0px;
+			padding:0px;
+        }
+    .clearfix:after{
+	display:table;
+	content:"";
+	clear:both;
+    }
+    li{
+	list-style:none;
+    }
+    html{
+        width: 100%;
+        height: 100%;
+
+    }
+    .swiper{
+       background-color: white;
+        width: 460px;
+        height: 420px;
+  
+        margin: 80px auto;
+        left: 40px;
+        position: absolute;
+        overflow: hidden;
+        background-color: #d90b18;
+    }
+    .swiper ul{
+        width: 9999px;
+        margin-top: 50px; 
+        /* overflow: hidden; */
+        /*清除浮动*/
+        /*transition: 1s;*/
+    
+    }
+    .swiper li{
+        float: left;
+        width: 460px;
+        height: 320px;
+    }
+    /*按钮*/
+    .btn{
+        position: absolute;
+        top: 60%;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        
+        margin-top: -55px;
+        text-align: center;
+        line-height: 27px;
+        border-radius: 50%;
+        font-size: 26px;
+        color: #fff;
+        background: #666;
+        opacity: .5;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    .next{
+        left: 420px;
+    }
+    .transi{
+        transition: 500ms;
+    }
+    /*小圆点*/
+    ul.item{
+        width: 80px;
+        position: absolute;
+        bottom: 10px;
+        left: 55%;
+        transform: translateX(-50%);
+        /*清除浮动*/
+        /* overflow: hidden; */
+        z-index: 1000;
+    }
+    .item li{
+        float: left;
+        width: 7px;
+        height: 7px;
+        border: 1px solid rgb(158, 157, 157);
+        background: rgb(158, 157, 157);
+        border-radius: 50%;
+        margin: 0 3px;
+    }
+    li.active{
+        background: rgb(224, 218, 218);
+        width: 8px;
+        height: 8px;
+    }
+    .wordIntroudace{
+        width: 50%;
+        height: 100%;
+        float: left;
+        margin-left: 40%;
+        margin-top:30px;
+    }
+    .wordIntroudace div{
+        float: left;
+       
+    }
+    .spell{
+        width: 80px;
+        color: #d90b18;
+        height: 30px;
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        margin-top: -40px;
+        letter-spacing: 2px;
+    }
+    .mainTiltle{
+        font-size: 40px;
+        width: 150px;
+     
+   
+        color:#d90b18;
+        font-weight: bolder;
+    }
+    .subtitle1,.subtitle2{
+        font-size: 20px;
+        margin-top:0px;
+        margin-bottom: 30px;
+        color:#d90b18;
+       
+    }
+    /* .line{
+        height: 2px;
+        width: 100%;
+        
+        border-bottom: 2px dashed red;
+    } */
+    .num1,.num2{
+       
+        margin-top:30px;
+    }
+    .paragraph{
+        text-indent: 20px;
+        margin-top: 0px ;
+        color:#d90b18;
+        font-size: 13px;
+        line-height: 17px;
+        background-color: white;
+
+    }
+    .paragraph p{
+        margin:10px;
+        color:#b8000b;
+    }
+    .BottonBorder{
+    height: 8px;
+    width: 100%;
+    background-image: url(img/bottomtriangle.jpg);
+    }
+    .redTop{
+        height: 60px;
+        width: 100%;
+        background-color:#d90b18;
+    }
+    .Tindex li{
+        float: left;
+        width: 14%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color: #d90b18;
+        position: relative;
+        top:-60px;
+        left:15%;
+    }
+    .Tindex li a{
+        color: white;
+        font-size: 17px;
+    }
+    .Tindex li:hover{
+    border-left:3px white dashed;
+    border-right:3px white dashed;
+    cursor: pointer;
+    height: 50px;
+    
+}
+.lastBorder{
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background-image: url(img/toptriangle.jpg);
+    margin-top:60%;
+}
+.picBorder{
+    height: 8px;
+    width: 100%;
+    background-image: url(img/toptriangle.jpg);
+    }
+.BpicBorder{
+    height: 8px;
+    width: 460px;
+    background-image: url(img/bottomtriangle.jpg);
+    position: absolute;
+    top: 615px;
+    left: 40px;
+   
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #666;
+    margin-top: 40px;
+}
+.fifth{
+    margin-top:60%;
+    width: 100%;
+    height: 190px;
+    background-color: #d90b18;
+}
+.FifthTitle{
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    margin-left: 32%;
+    height: 60px;
+    font-weight: bold;
+    line-height: 160px;
+}
+.FifthTitle span{
+   margin-left: 5%;
+   color:  rgb(235, 197, 197);
+}
+.FifthTitle p {
+    font-size: 20px;
+    color: rgb(235, 197, 197);
+    position: relative;
+    margin-top: -130px;
+    margin-left: -3%;
+}
+
+.LastBotton{
+    background-color: #b8000b;
+    width: 100%;
+    height: 100px;
+}
+.LastBotton p {
+    position: relative;
+    color: white;
+    margin-top: 30px;
+    margin-left:35%;
+    float: left;
+    line-height: 200%;
+}
+</style>
+<body>
+        <div class="Pbannar">
+                <div class="redTop"></div>
+                <div class="BottonBorder"></div>
+                <ul class="Tindex clearfix">
+                        <li><a href="placeJgs.html">井冈山</a></li>
+                        <li><a href="placeYa.html">延安</a></li>
+                        <li><a href="placeYm.html">沂蒙</a></li>
+                        <li><a href="placeMx.html">闽西</a></li>
+                        <li><a href="homepage.html">主页</a></li>
+                </ul>
+            </div>
+
+    <div class="wordIntroudace clearfix">
+        <div class="spell">[mǐn xī]</div>
+        <div class="mainTiltle">
+            闽西
+        </div>
+        <div class="line"></div>
+        <div class="num1 clearfix">
+            <div class="subtitle1">红色文化</div>
+            
+            <div class="PtopBorder"></div>
+            <div class="first paragraph"><p>929年前后，即自1927年春蒋介石叛变革命而成为新军阀后，到1930年底这段历史时期，
+                是握有军权的新旧军阀们以混战形式反复争夺霸主权的剧烈动荡时期。1929年三四月间爆发了蒋介石同桂系军阀之间的战争。
+                毛泽东自1929年3月中旬开始，抓住军阀混战的有利时机，同朱德等率领红四军东征闽西，把井冈山武装斗争的火种播种到福建。
+                1929年3月11日红四军第一次挥师入闽，蒋桂战争爆发后，攻占了龙岩、
+                永定，成立了两县革命政权。红四军乘胜分兵发动群众，打土豪，分田地，扩大地方赤卫队，建立各级革命政权，从而开辟了闽西革命根据地。</p>
+                    </div>
+            </div>
+            <div class="PButtomBorder"></div>
+       
+        <div class="num2 clearfix">
+                <div class="subtitle2">反会剿</div>
+               
+                <div class="PtopBorder"></div>
+                <div class="first paragraph"><p>
+                        1929年6月～9月，土地革命战争时期，中国工农红军第4军在闽西根据地反对闽、粤、赣三省国民党军。会剿”的作战。
+                </p>
+                <p>
+                        红4军在闽西的胜利，震动了国民党反动派。1929年6月，蒋介石命令国民党军对闽西根据地和红4军进行第一次“会剿”。
+                        其部署是；以闽西暂编第l师主力从赣州向龙岩进攻；以粤军第7旅从大埔、松田向永定推进；以赣军第7师第21旅为主
+                        力军，从长汀向新泉、古田担任主攻。红4军前委鉴于三省“会剿”军派系不同，行动不协调，易为我所乘；闽西广大军民
+                        已经发动起来，可以有力地支援作战，遂于6月下旬决定：采取。诱敌入红色区，击破一面”的战略，并以较弱的闽军为主要
+                        作战对象，各个击破，粉碎敌之“会剿”。7月下旬，“会剿”军赣军第12师2个团进到长汀，第2l旅由长汀进到河田，
+                        闽军暂编第1师一部进到龙岩以南的适中。红4军前委由十对情况估计过分严重，认为在闽两无法打破敌人的“会剿”，
+                        遂改变原定计划，决定将第1纵队和第4纵队留在阁西坚持游击战争；由朱德率军部和第2、第3纵队东进闽中，渡过闽江，
+                        前去赣浙皖边界进行游击。8月2日，东进部队由白沙出发，于8日攻占漳平，歼灭守军一部。中旬，向闽中大田、德化前进。准备渡过闽江，到赣浙皖边界游击。
+                </p>
+                <p>
+                        下旬，红4军前委鉴于闽中反动土著武装较强。共产党在闽中地区的群众工作基础薄弱，红军筹措给养困难，加之天气炎热
+                        多雨，部队病员日增，遂决定放弃到赣浙皖边游击的计划，回师闽西根据地。红4军主力离开闽西后，江西国民党军暂编第
+                        1师第1旅进占漳平，第2旅进占龙岩。8月29日，红4军主力在回归闽西途中，在溪南歼灭闽军近1个团，于30日攻占漳平，
+                        又歼守军1个营。驻龙岩之闽军闻风而逃。在此其间，留在闽两的红4军第1、第4纵队在中共闽西特委的领导下，广泛开展游
+                        击战争，迫使“会剿”之赣军退守长汀、连城，粤军退守永定、湖雷。至此，国民党军对闽西根据地的第一次“会剿”基本被打
+                        破。9月，红4军转入进攻，前委决定攻打上杭。21日拂晓，红4军在地方武装和广大人民群众的积极配合下，对上杭之敌发起
+                        猛攻，并迅速突入城内，全歼福建省防军暂编第2旅2000余人。接着又乘胜攻占了武平、永定两城。从而巩固和扩大了根据地。
+
+                </p>
+            </div>
+         </div>
+         <div class="PButtomBorder"></div>
+   
+    </div>
+    
+    <div class="swiper">
+            <div class="picBorder"></div>
+        <!--图片区域-->
+        <ul class="imgBox">
+            <li><img src="img/mx1.png" alt="" /></li>
+            <li><img src="img/mx2.png" alt="" /></li>
+            <li><img src="img/mx3.png" alt="" /></li>
+            <li><img src="img/mx4.png" alt="" /></li>
+        </ul>
+        <!--左右按钮-->
+        <div class="btn pre">&lt;</div>
+        <div class="btn next">&gt;</div>
+        <!--小圆点-->
+        <ul class="item">
+            <!--<li class="active"></li>
+            <li></li>
+            <li></li>-->
+            
+        </ul>
+        
+    </div>
+    <div class="BpicBorder"></div>
+    <div class="lastBorder"></div>
+    <div class="fifth">
+            <div class="FifthTitle">
+                   <span>持续创新 相互信任 长期合作</span> 
+                    <p>Continuous Innovation, Mutual Trust and Long-term Cooperation</p>
+            </div>
+
+        </div>
+        <div class="LastBotton"><p> 开发团队：基于Python爬虫绘制知识图谱的“红色亲子游”项目组
+                <br>联系电话17729503929 西安科技大学计算机学院</p>
+            </div>
+        </div>
+    
+    <script type="text/javascript">
+        window.onload=function(){
+            let swiper = document.querySelector(".swiper"),
+                pre = swiper.querySelector(".pre"),
+                next = swiper.querySelector(".next"),
+                _ul = swiper.querySelector(".imgBox"),//图片ul
+                ali = _ul.querySelectorAll('li'),
+                aImg = swiper.querySelectorAll("li img"),
+                imgW = aImg[0].offsetWidth,//需要window.onload
+                index = 1,//计算滚动到哪张图片
+                isTransitioned = true,//判断动画是否已完成
+                item = swiper.querySelector('.item');
+            
+            //克隆第一张图片，添加到图片队列的最后面
+            let cloneLi = ali[0].cloneNode(true);
+            _ul.appendChild(cloneLi);
+            //克隆最后一张图片，添加到图片队列的最前面
+            let cloneLastLi = ali[ali.length-1].cloneNode(true);
+                //插入方法1：
+//              _ul.insertBefore(cloneLastLi,ali[0]);
+                //插入方法2
+            _ul.prepend(cloneLastLi);
+            
+            //点击右边按钮
+            next.addEventListener("click",()=>{
+                if(isTransitioned){
+                    index++;//先++再设置
+                    move();
+                    fenyeq(index);  
+                }
+            })
+            
+            
+            //初始化图片队列：
+            _ul.style.transform="translateX("+(-imgW*index)+"px)";
+            //点击左边按钮
+            pre.addEventListener("click",()=>{
+                if(isTransitioned){
+                    index--;
+                    move();
+                    fenyeq(index);
+                }
+            })
+            
+            setInterval(function(){
+                if(isTransitioned){
+                    index++;
+                    move();
+                    fenyeq(index);
+                }
+            },4000)
+            
+            //监听动画结束
+            _ul.addEventListener("transitionend",()=>{//给ul加了transi
+                if(index == aImg.length+1){//边界判断
+                    index = 1;
+                    _ul.classList.toggle("transi");//移除ul的transi
+                    _ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+                }
+                if(index==0){
+                    index=aImg.length;
+                    _ul.classList.toggle("transi");//移除ul的transi
+                    _ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+                }
+                isTransitioned = true;//每次动画结束都判断
+            })
+            
+            
+            //根据图片的张数生成分页器
+            for(let i=0;i<aImg.length;i++){
+                var newLi = document.createElement('li');
+                item.appendChild(newLi);
+            }
+            //第一个小圆点添加样式
+            item.children[0].classList.add('active');
+            //给分页器添加点击事件
+            for(let j=0;j<item.children.length;j++){
+                    item.children[j].addEventListener('click',()=>{
+                        for(let q=0;q<item.children.length;q++){
+                            item.children[q].classList.remove('active');
+                        }
+                        item.children[j].classList.add('active');
+                        index = j+1;
+                        _ul.classList.add('transi');
+                        _ul.style.transform="translateX("+(-imgW*index)+"px)";
+                    })
+                }
+            //点击左右按钮分页器跟随
+            function fenyeq(index){
+                for(let k=0;k<item.children.length;k++){
+                    item.children[k].classList.remove('active');
+                }
+                index = index -1;
+                index = index==item.children.length?0:index;//左按钮边界
+                index = index<0?item.children.length-1:index;//右按钮边界
+                item.children[index].classList.add('active');
+            }
+            
+            function move(){
+                _ul.classList.add("transi");
+                _ul.style.transform="translateX("+(-imgW*index)+"px)";
+                isTransitioned = false;
+            }
+    }
+
+        
+    </script>
+
+</body>
+</html>

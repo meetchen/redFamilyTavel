@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+.section{
+    width: 100%;
+    height: 100%;
+    background: url(img/background1.jpg) no-repeat center center ; 
+    background-size: 80%
+}
+li{
+    width: 10%;
+    height: 30px;
+    font: outline;
+    text-align: center;
+    line-height: 30px;
+    float:left;
+    border-bottom: 0;
+    position: relative;
+    margin: 70px;
+}
+.index{
+    border-left: 100px;
+    position: absolute;
+    left: 40%;
+    top: 30px;
+    width: 80%;
+    font-size:15px;
+    line-height: 40px;
+
+}
+
+.line{
+    left: 40%;
+    top:75px;
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    border-bottom:2px white dashed;
+}
+.index li a{
+    color: white;
+}
+
+li:hover{
+    border:1px white solid;
+    border-radius: 30px;
+    height: 30px;
+    background-color: #e2404b; 
+    
+}
+
+
+.banner{
+    height: 0px;
+    width: 100%;
+    background-color: #d90b18;
+}
+.homepage{
+    width: 100%;
+    height:620px;
+    background-image: url(img/background1.png);
+}
+.second{
+    width: 100%;
+    height: 740px;
+}
+.SecondTitle{
+    font-size: 32px;
+    font-weight: bolder;
+    color: #333333;
+    text-align: center;
+    float: left;
+}
+.titlekeynote{
+    color: #f29118; 
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    float: left;
+}
+.alltitle{
+    width: 770px;
+    height: 80px;
+    position: relative;
+    left: 30%;
+    top: 70px;
+}
+.titleEnglish{
+    width: 770px;
+    float: left;
+    position: relative;
+    top:15px;
+    font-size: 15px;
+    text-align:justify;
+    color: darkgray;
+}
+.introduce{
+    width: 1100px;
+    height: 90px;
+    float: left;
+    position: relative;
+    top: 80px;
+    left: 10%;
+    font-size: 15px;
+    line-height: 30px;
+}
+.picgroup div{
+    width: 262px;
+    height: 262px;
+    position: relative;
+    top: 50px;
+    margin-left: 15px;
+    border-radius: 100%;
+    float: left;
+}
+.picgroup{
+    width: 1310px;
+    height: 270px;
+    position: relative;
+    left: 9%;
+    top:10%;
+}
+.secondpic1{
+    background-image: url(img/pic1.jpg);
+}
+.secondpic2{
+    background-image: url(img/pic2.jpg);
+}
+.secondpic3{
+    background-image: url(img/pic3.jpg);
+}
+.secondpic4{
+    background-image: url(img/pic4.jpg);
+}
+.featuregroup{
+    width: 1200px;
+    height: 65px;
+    position: relative;
+    left: 15.5%;
+}
+.featuregroup div p{
+    font-size: 15px;
+    color: dimgray;
+    position: relative;
+    top: 15px;
+   left: -25px;
+   font-weight: normal;
+}
+.featuregroup div{
+    font-size: 25px;
+    font-weight: bolder;
+    color: dimgray;
+    position: relative;
+    float: left;
+    top: 150px;
+    width: 290px;
+    height: 60px;
+  
+}
+.TopBorder{
+    height: 8px;
+    width: 100%;
+    background-image: url(img/toptriangle.jpg);
+}
+
+.BottonBorder{
+    height: 8px;
+    width: 100%;
+    background-image: url(img/bottomtriangle.jpg);
+}
+.ThirdMain{
+    width: 100%;
+    height: 910px;
+    background-color: #d90b18;
+}
+.ThirdTitle{
+    color: white;
+    font-size: 35px;
+    text-align: justify;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    font-weight: bolder;
+    left: 38%;
+}
+.ThirdTitle p{
+    font-size: 20px;
+    font-weight:normal;
+    color: white;
+    position: relative;
+    top: 15px;
+}
+.ThirdPic1,.ThirdPic2{
+    width: 530px;
+    height: 300px;
+    position: relative;
+}
+.ThirdPic1{
+    left: 10%;
+    top: 150px;
+    background-image: url(img/2pic1.jpg);
+}
+.ThirdPic2{
+    left:50%;
+    top: -150px;
+    background-image: url(img/2pic2.jpg);
+}
+.ThirdPic1 button,.ThirdPic2 button{
+    width: 120px;
+    height: 40px;
+    background-color: #ffdbdb;
+    color: black;
+    float: right;
+    position: relative;
+    top: 310px;
+}
+.ThirdPic1 p,.ThirdPic2 p{
+    float: left;
+    width: 360px;
+    position: relative;
+    top: 310px;
+    font-size: 15px;
+    text-align: justify;
+    color:white;
+}
+.ThirdPic3,.ThirdPic4,.ThirdPic5,.ThirdPic6{
+    width: 260px;
+    height: 220px;
+    float: left;
+    margin-right: 18px;
+    margin-top: -70px;
+}
+.ThirdPic3{
+    background-image: url(img/2pic3.jpg);
+   
+}
+.ThirdPic4{
+    background-image: url(img/2pic4.jpg);
+    
+}
+.ThirdPic5{
+    background-image: url(img/2pic5.jpg);
+ 
+}
+.ThirdPic6{
+    background-image: url(img/2pic6.jpg);
+   
+}
+.button1,.button2,.button3,.button4{
+    width: 260px;
+    height: 40px;
+    background-color: #ffdbdb;
+    float: left;
+    margin-right: 18px;
+    margin-top: -38px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 13px;
+
+}
+.ThirdPicGroup{
+    position: relative;
+    width: 1140px;
+    height: 220px;
+    left:10%;
+}
+.ButtonGrourp{
+    position: relative;
+    width: 1140px;
+    height: 40px;
+    left:10%;
+}
+.FourthMain{
+    width: 100%;
+    height: 800px;
+}
+.FourthTitle{
+    color:#d90b18;
+    font-size: 35px;
+    text-align: justify;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    font-weight: bolder;
+    left: 40%;
+}
+.FourthTitle p{
+    font-size: 18px;
+    font-weight:normal;
+    color: #d90b18;
+    position: relative;
+    top: 15px;
+}
+.SubTitle{
+    font-size: 15px;
+    font-weight: bolder;
+    position: relative;
+    top: 100px;
+    left: -5%;
+   
+}
+hr{
+    width: 1200px;
+    float: left;
+    color: #b6c5a9;
+    position: relative;
+    margin-left: 200px;
+}
+.SubTitle p{
+    font-size: 20px;
+    margin-left: 280px;
+    color: #d90b18;
+   
+}
+.FourthPicGroup{
+    margin-left: 0%;
+}
+.date{
+    
+    font-size: 30px;
+    float: left;
+    margin-top:70px;
+    margin-right: 55px;
+}
+.FourthPic1,.FourthPic2,.FourthPic3{
+    width: 330px;
+    height: 220px;
+    float: left;
+    position: relative;
+    top: 50px;
+    left: 10%;
+    margin-right: 70px;
+}
+.FourthPic1{
+    background-image: url(img/3pic1.jpg);
+}
+.FourthPic2{
+    background-image: url(img/3pic2.jpg);
+}
+.FourthPic3{
+    background-image: url(img/3pic3.jpg);
+}
+.DateGroup div{
+    font-size: 28px;
+    font-weight: bolder;
+    float: left;
+    color:  #d90b18;
+    position: relative;
+    left: -10%;
+    margin-left: 23%;
+    margin-top: 150px;
+}
+.PGroup p a{
+    font-size: 15px;
+    color: #d90b18;
+    float: left;
+    margin-right: 70px;
+    margin-top: 50px;
+    width: 330px;
+    position: relative;
+    top: 20px;
+    line-height: 130%;
+}
+.PGroup{
+    margin-left: 10%; 
+}
+.PGroup p a:hover{
+    font-weight: bolder;
+}
+.fifth{
+    width: 100%;
+    height: 190px;
+    background-color: #d90b18;
+}
+.FifthTitle{
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    margin-left: 32%;
+    height: 60px;
+    font-weight: bold;
+    line-height: 160px;
+}
+.FifthTitle span{
+   margin-left: 5%;
+   color:  rgb(235, 197, 197);
+}
+.FifthTitle p {
+    font-size: 20px;
+    color: rgb(235, 197, 197);
+    position: relative;
+    margin-top: -130px;
+    margin-left: -3%;
+}
+/* .FifthPic{
+    position: relative;
+    left: 10%;
+    top: 130px;
+}
+.FifthPic div{
+    width: 160px;
+    height: 85px;
+    float: left;
+    margin-right: 28px;
+} */
+/* .FifthPic1{
+    background-image: url(img/4pic1.jpg);
+}
+.FifthPic2{
+    background-image: url(img/4pic2.jpg);
+}
+.FifthPic3{
+    background-image: url(img/4pic3.jpg);
+}
+.FifthPic4{
+    background-image: url(img/4pic4.jpg);
+}
+.FifthPic5{
+    background-image: url(img/4pic5.jpg);
+}
+.FifthPic6{
+    background-image: url(img/4pic6.jpg);
+} */
+.LastBotton{
+    background-color: #b8000b;
+    width: 100%;
+    height: 100px;
+}
+.LastBotton p {
+    position: relative;
+    color: white;
+    margin-top: 30px;
+    margin-left:35%;
+    float: left;
+    line-height: 200%;
+}
+*{
+	box-sizing:border-box;
+	color:#000;
+}
+body{
+	font-size:12px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+	line-height:120%;
+	background:#fff;
+	margin:0;
+	overflow-x:hidden;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,form,table{
+	margin:0;
+	padding:0;
+}
+a,img{
+	border:none;
+}
+img{
+	vertical-align:middle;
+	border:0;
+}
+li{
+	list-style:none;
+}
+i,em{
+	font-style:normal;
+}
+a{
+	text-decoration:none; 
+	color:#000000;
+	border:0;
+}
+a:link{
+	text-decoration:none; 
+	color:#000000;
+}
+a:visited{
+	text-decoration:none; 
+	color:#000000;
+}
+a:hover{
+	text-decoration:none; 
+	color:#000000;
+}
+a:active{
+	text-decoration:none; 
+	color:#000000;
+}
+.clearfix:after{
+	display:table;
+	content:"";
+	clear:both;
+}
+.clearfix{
+	*zoom:1;
+}
+</style>
+</head>
+<body>
+    <div class="section">
+        <div class="top">
+        <div class="banner clearfix">
+            
+         
+
+                    <!-- <div class="logo"></div> -->
+                    
+                        <ul class="index clearfix" >
+                            <li><a href="">网站首页</a></li>
+                            <li><a href="placeJgs.html">红色根据地</a></li>
+                            <li><a href="saling.html">热门专区</a></li>
+                            <li><a href="http://kw.fudan.edu.cn/cndbpedia/search/?mention=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98&entity=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98%EF%BC%881936%E5%B9%B412%E6%9C%8812%E6%97%A5%E5%BC%A0%E5%AD%A6%E8%89%AF%E5%92%8C%E6%9D%A8%E8%99%8E%E5%9F%8E%E5%8F%91%E5%8A%A8%E7%9A%84%E5%85%B5%E8%B0%8F%EF%BC%89">历史数据图谱</a></li>
+                            <li><a href="signIn.html">用户登录</a></li>
+                            <li><a href="signUp.html">用户注册</a></li>
+                        </ul>
+                    <div class="line"></div>
+        
+         </div>
+           
+
+            <div class="homepage"></div>
+         </div>
+
+         <div class="second clearfix">
+             <div class="alltitle clearfix">
+             <div class="SecondTitle">探索</div>
+             <div class="titlekeynote">中国著名红色革命根据地</div>
+             <div class="SecondTitle">奋斗的地方</div>
+             <div class="titleEnglish">Elysian peace; a paradisal place without work or struggle;an age of paradisiacal happiness.</div>
+            </div>
+             <p class="introduce">在某些地区（如北岳区、太行山、山东）有了革命的武装、革命的政权、革命的群众组织、革命的政党——共产党（而且前面的三种组织都在共产党领导之下），这四种组织在一定地区能够公开的合法的存在，各自执行自己的职权（如政权执行自己的法令、纪律、各种制度），这样的地区，就叫做革命根据地。
+                 如井冈山、延安、沂蒙是中国革命战争时期最重要的三大老革命根据地。</p>
+                <div class="picgroup clearfix">
+                    <div class="secondpic1"></div>
+                    <div class="secondpic2"></div>
+                    <div class="secondpic3"></div>
+                    <div class="secondpic4"></div>
+                </div>
+                <div class="featuregroup clearfix">
+                    <div class="feature1">井冈山<p>工农政权、群众武装</p></div>
+                    <div class="feature2">延安<p>艰苦创业、无私奉献</p></div>
+                    <div class="feature3">沂蒙<p>勇往直前、永不服输</p></div>
+                    <div class="feature4">闽西<p>吃苦耐劳、自强不息</p></div>
+                </div>
+         </div>
+        <div class="third">
+            <div class="TopBorder"></div>
+            <div class="ThirdMain">
+                <div class="ThirdTitle">
+                    最趣亲子游 热门专区
+                    <p>the most intersting tavel for hot saling</p>
+                </div>
+                <div class="ThirdPic">
+                        <div class="ThirdPic1 clearfix">
+                            <p>横县红色文化园:创建了中国共产党领导下的内蒙古自治政府。
+                                1949年绥远“九一九”起义，实现了大青山地区的和平解放。
+                            </p>
+                            <button>点击查看更多</button>
+                        </div>
+                        <div class="ThirdPic2 clearfix">
+                            <p>金寨汤家汇的红色文化:大革命时期，汤家汇镇是鄂豫皖革命根据地的重要组成部分，
+                                
+                            </p>
+                            <button>点击查看更多</button>
+                        </div>
+                        <div class="ThirdPicGroup">
+                        <div class="ThirdPic3"></div>
+                        <div class="ThirdPic4"></div>
+                        <div class="ThirdPic5"></div>
+                        <div class="ThirdPic6"></div>
+                        </div>
+                        <div class="ButtonGrourp clearfix">
+                        <div class="button1"><a href="saling.html">红色文化革命遗址群</a></div>
+                        <div class="button2"><a href="saling.html">椰子寨红色革命教育基地</a></div>
+                        <div class="button3"><a href="saling.html">华梦豪车俱乐部在西柏坡革命红色圣地</a></div>
+                        <div class="button4"><a href="saling.html">中央统战部旧址</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="BottonBorder"></div>
+        </div>
+
+         <div class="fourth">
+            <div class="FourthMain">
+                    <div class="FourthTitle">
+                            历史相关数据图库
+                            <p> Historical Relevant Data Gallery</p>
+                    </div>
+                    <div class="SubTitle clearfix">
+                        <p>news </p>  
+                        <br/><hr>                       
+                    </div>
+                    <div class="DateGroup clearfix">
+                        <div class="date1">03-25</div>
+                        <div class="date2">03-30</div>
+                        <div class="date3">03-28</div>
+                    </div>
+                    <div class="FourthPicGroup clearfix">
+                        <div class="FourthPic1 "></div>
+                        <div class="FourthPic2"></div>
+                        <div class="FourthPic3"></div>     
+                    </div>
+                    <div class="PGroup clearfix">
+                    <p><a href="http://kw.fudan.edu.cn/cndbpedia/search/?mention=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98&entity=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98%EF%BC%881936%E5%B9%B412%E6%9C%8812%E6%97%A5%E5%BC%A0%E5%AD%A6%E8%89%AF%E5%92%8C%E6%9D%A8%E8%99%8E%E5%9F%8E%E5%8F%91%E5%8A%A8%E7%9A%84%E5%85%B5%E8%B0%8F%EF%BC%89">“不忘初心，方得始终啊！我们的初心是什么？上海石库门、
+                        南湖红船，诞生了中国共产党，14年抗战、历史性决战，
+                        才有了中华人民共和国。共和国是红色的，不能淡化这个颜色。”
+                        今年全国两会上，习近平总书记在看望参加政协会议的文艺界社科界委员时如是说。</a></p>
+                    <p><a href="http://kw.fudan.edu.cn/cndbpedia/search/?mention=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98&entity=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98%EF%BC%881936%E5%B9%B412%E6%9C%8812%E6%97%A5%E5%BC%A0%E5%AD%A6%E8%89%AF%E5%92%8C%E6%9D%A8%E8%99%8E%E5%9F%8E%E5%8F%91%E5%8A%A8%E7%9A%84%E5%85%B5%E8%B0%8F%EF%BC%89">今年是新中国成立70周年，传承红色基因要继续深入落实。
+                        各级党组织要认真抓好科学理论武装，深化党史国史军史教育，积极弘扬红色革命文化，
+                        开展丰富多彩的学习、纪念活动，深入宣传英雄烈士和时代楷模，
+                        真正让“红色”激荡在每个人心中，永不褪色永不淡化。</a></p>
+                    <p><a href="http://kw.fudan.edu.cn/cndbpedia/search/?mention=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98&entity=%E8%A5%BF%E5%AE%89%E4%BA%8B%E5%8F%98%EF%BC%881936%E5%B9%B412%E6%9C%8812%E6%97%A5%E5%BC%A0%E5%AD%A6%E8%89%AF%E5%92%8C%E6%9D%A8%E8%99%8E%E5%9F%8E%E5%8F%91%E5%8A%A8%E7%9A%84%E5%85%B5%E8%B0%8F%EF%BC%89">“活”起来才能“红”起来。今年两会上，有代表委员反映，近几年红色影片热映，
+                        成为电影市场的新风尚，也成为传承红色基因的好载体。不仅如此，红色课堂、
+                        红色故事会、红色广场文化、红色文物展示、“红色家谱”编修、红色人物宣传……很多地方开
+                        展的一系列活动。</a></p>
+                    </div>
+
+            </div>
+            <div class="TopBorder"></div>
+         </div>
+    <div class="fifth">
+        <div class="FifthTitle">
+               <span>持续创新 相互信任 长期合作</span> 
+                <p>Continuous Innovation, Mutual Trust and Long-term Cooperation</p>
+        </div>
+        <!-- <div class="FifthPic clearfix">
+            <div class="FifthPic1"></div>
+            <div class="FifthPic2"></div>
+            <div class="FifthPic3"></div>
+            <div class="FifthPic4"></div>
+            <div class="FifthPic5"></div>
+            <div class="FifthPic6"></div>
+        </div> -->
+    </div>
+    <div class="LastBotton"><p> 开发团队：基于Python爬虫绘制知识图谱的“红色亲子游”项目组
+            <br>联系电话17729503929 西安科技大学计算机学院</p>
+        </div>
+    </div>
+    <script>
+    var oIdc = document.etElementsByClassName("")
+    
+    </script>
+</body>
+</html>

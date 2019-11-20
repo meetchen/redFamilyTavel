@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="build/kalendae.standalone.js"></script>
+    <link rel="stylesheet" href="build/kalendae.css".css">
+    <style type="text/css" media="screen">
+	li{list-style: none;}
+		*{
+			margin:0px;
+			padding:0px;
+		}
+	
+        html{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(238, 238, 238);
+
+    }
+    .swiper{
+       background-color: white;
+        width: 580px;
+        height: 340px;
+        /* margin: 80px auto; */
+        left: 11%;
+        margin-top:17px;
+        position: absolute;
+        overflow: hidden;
+    }
+    .swiper ul{
+        width: 9999px;
+        margin-top: 0px; 
+        overflow: hidden;
+        /*清除浮动*/
+        /*transition: 1s;*/
+    }
+    .swiper li{
+        float: left;
+        width: 579px;
+        height: 340px;
+    }
+    /*按钮*/
+    .btn{
+        position: absolute;
+        top: 60%;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        margin-top: -55px;
+        text-align: center;
+        line-height: 27px;
+        border-radius: 50%;
+        font-size: 26px;
+        color: #fff;
+        background: #666;
+        opacity: 0.5;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    .next{
+        left: 540px;
+    }
+    .transi{
+        transition: 500ms;
+    }
+    /*小圆点*/
+    ul.item{
+        width: 80px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        /*清除浮动*/
+        /* overflow: hidden; */
+        z-index: 1000;
+    }
+    .item li{
+        float: left;
+        width: 7px;
+        height: 7px;
+        border: 1px solid rgb(158, 157, 157);
+        background: rgb(158, 157, 157);
+        border-radius: 50%;
+        margin: 0 3px;
+    }
+    li.active{
+        background: rgb(224, 218, 218);
+        width: 8px;
+        height: 8px;
+    }
+    .main{
+        width: 80%;
+        height: 375px;
+        border:rgb(156, 153, 153) 1px solid;
+      
+        margin-left: 10%;
+        margin-top: 60px;
+        background-color:white; 
+    }
+    .right{
+        margin-left:56%;
+        margin-top: 18px;
+      
+    }
+   
+    .title{
+        font-size: 25px;
+        margin-right:5%;
+        color: rgb(41, 40, 40);
+        
+    }
+    .point{
+        margin: 5%;
+        color: crimson;
+        border: 1px crimson dashed;
+        margin-left:0;
+        margin-bottom:3%;
+        padding: 10px 0 15px;
+        border-radius: 3px;
+       
+    }
+    .point p{
+        margin: 6px;
+        color:rgb(68, 67, 67);
+    }
+    .heart{
+        color: crimson;
+    }
+   
+    .score{
+        color: crimson;
+        font-size:20px;
+    }
+    .normalWord{
+        width: 15%;
+        float: left;
+        font-size: 13px;
+        height: 30px;
+        line-height: 30px;
+    
+    }
+    .score{
+        width: 20px;
+        float: left;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;;
+    }
+    .allScore{
+        float: left;
+        width: 62%;
+        margin-left:10px;
+        font-size: 13px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .date{
+        
+        font-size: 13px;
+        width: 180px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: rgb(124, 123, 123) .5px solid;
+        border-radius: 10px;
+        margin-top:0px;
+        float: left;
+        left: 60%;
+        top:38%;
+     
+    }
+    .date:hover{
+        background-color: bisque;
+        cursor: pointer;
+    }
+    .price{
+        font-size: 30px;
+        color: crimson;
+        font-weight: bolder;
+        float: left;
+        margin-left: -50%;
+        margin-top: 7%;
+    }
+    .buyNow{
+        float:right;
+        width: 150px;
+        height: 50px;
+        background-color: crimson;
+        color: white;
+        line-height: 50px;
+        text-align: center;
+        margin-right: 5%;
+        margin-top: 7%;
+      
+    }
+    .buyNow:hover{
+        border: gray 1px solid;
+        cursor: pointer;
+       
+    }
+    .buttomTip{
+        width: 25%;
+        height: 200px;
+        float: left;
+        margin-top:10%;
+        background-color: white;
+        border:rgb(156, 153, 153) .8px solid;
+    }
+    .line{
+        width: 90%;
+        margin-left:5%;
+        height: 2px;
+        background-color: rgb(224, 221, 221);
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    .buttomTip p{
+        width: 80%;
+        font-size: 14px;
+        margin-left: 10%;
+        margin-top:2px;
+        margin-right: 3px;
+        color:rgb(68, 67, 67);
+    }
+    .clearfix:after{
+	    display:block;
+	    content:"";
+	    clear:both;
+    }
+    .hearder{
+        width: 100%;
+        height: 50px;
+        background-color: rgb(238, 238, 238);
+        color:rgb(68, 67, 67);
+    }
+    .hearder div{
+        width: 33.25%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        float: left;
+    }
+    .hearder div:hover{
+        background-color: white;
+        cursor: pointer;
+    }
+    .buttom{
+        width: 69.5%;
+        height: 200px;
+        float: left;
+        border:rgb(156, 153, 153) .8px solid;
+        background: white;
+        margin-top:5.5%;
+        margin-left: 5%;
+        color:rgb(68, 67, 67); 
+
+    }
+    .content{
+        margin-top:10px;
+        margin-left:10px;
+    }
+    .content div{
+        font-size: 13px;
+        line-height: 20px;
+        width: 100%;
+        height: 150px;
+        display: none; 
+    }
+    
+    </style>
+    
+</head>
+<body>
+    
+        <div class="swiper">
+                <div class="picBorder"></div>
+            <!--图片区域-->
+            <ul class="imgBox">
+           
+                <li><img src="img/sp1.png" alt="" /></li>
+                <li><img src="img/sp2.png" alt="" /></li>
+                <li><img src="img/sp3.png" alt="" /></li>
+                <li><img src="img/sp4.png" alt="" /></li>
+                <li><img src="img/sp5.png" alt="" /></li>
+
+           
+            </ul>
+            <!--左右按钮-->
+            <div class="btn pre">&lt;</div>
+            <div class="btn next">&gt;</div>
+            <!--小圆点-->
+            <ul class="item">
+                <!--<li class="active"></li>
+                <li></li>
+                <li></li>-->
+                
+            </ul>
+            
+        </div>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right">
+            <div class="title">【红色太行山】酒店专车上门接送 ，买一赠送七重豪礼</div>
+            <div class="point">
+                   <p><span class="heart">❤</span>VIP尊享太行山9号车，更舒适，更快捷，更安全！</p> 
+                    <p><span class="heart">❤</span>16:00-18:00循环回程，人满即发车，可畅玩后下山！</p> 
+                    <p><span class="heart">❤</span>暖心赠送七重大礼包，贴心为您的旅行增加舒服和便捷</p> 
+            </div>
+           
+           
+            <div class="protect"></div>
+            <p class="normalWord">已售 : 65</p> 
+            <p class="normalWord">用户点评:</p> <p class="score">4.9</p>  <p class="allScore">/5.0分</p>
+            <p class="normalWord">游玩日期</p>
+            <div class="date"> 
+              请选择游玩日期
+            </div>
+            <div class="price">￥ 788</div>
+            <div class="buyNow">立即预订</div>
+        </div>
+        <div class="buttomTip">
+                <div class="line"></div>
+                <p class="cardWord">营运商：红色文化园</p> 
+                <p>服务评分:<img src="img/star.png" alt="">4.94</p>
+                <div class="firstLogo"></div>
+                <p class="cardWord">服务热线：</p>
+                <p class="number">400-000-000</p>
+                <div class="secondLogo"></div>
+                <p class="cardWord">工作时间：</p>
+                <p class="number">00:00:00-23:00:00</p>
+        </div>
+        <!-- 选项卡 -->
+        <div class="buttom">
+            <div class="hearder clearfix">
+                <div>使用说明</div>
+                <div>咨询说明</div>
+                <div>退款说明</div>
+                
+            </div>
+            <div class="content">
+                <div class="tab first">
+                        【住宿】
+                        1、行程所列酒店住宿费用2、酒店标准2人间<br/>
+                        【用餐】 
+                        4 早4正餐，8人一桌，8菜1汤，正餐标准20元/人/餐 <br/>
+                        【门票】 
+                        行程中所含景点的首道大门票 <br/>
+                        【保险】 
+                         此产品已包含旅游意外伤害保险、旅行社组合险保险，一人一份 <br/>
+                        【导游服务】 
+                        当地中文导游服务，自由活动期间除外 <br/>
+
+                    </div>
+                    <div class="tab">【疑问烦请咨询】<br>
+                            亲，如果您有疑问可咨询我们的在线客服或电话咨询4008-0000-000转1700，谢谢亲们了！ </div>
+                    <div class="tab"> 行程开始前30日至15日，按旅游费用总额的5%；<br>
+                            行程开始前14日至7日，按旅游费用总额的20%；<br>
+                            行程开始前6日至4日，按旅游费用总额的50%；<br>
+                            行程开始前3日至1日，按旅游费用总额的60%；<br>
+                            行程开始当日，按旅游费用总额的70%。<br></div>
+            </div>
+        </div>
+               
+        </div>
+    </div>
+    <script type="text/javascript">
+
+     window.onload=function(){
+
+        let oHd = document.querySelector('.hearder').querySelectorAll('div');
+        let oCtt = document.querySelectorAll('.tab');
+        for(var i =0; i<oHd.length;i++){
+        oHd[i].index = i;
+        oHd[i].onmouseover =function(){
+            for (var i =0;i<oHd.length;i++){
+            oCtt[i].style.display="none";
+
+        }
+        oCtt[this.index].style.display="block";
+}
+}
+        
+    
+            let swiper = document.querySelector(".swiper"),
+                pre = swiper.querySelector(".pre"),
+                next = swiper.querySelector(".next"),
+                _ul = swiper.querySelector(".imgBox"),//图片ul
+                ali = _ul.querySelectorAll('li'),
+                aImg = swiper.querySelectorAll("li img"),
+                imgW = aImg[0].offsetWidth,//需要window.onload
+                index = 1,//计算滚动到哪张图片
+                isTransitioned = true,//判断动画是否已完成
+                item = swiper.querySelector('.item');
+            
+            //克隆第一张图片，添加到图片队列的最后面
+            let cloneLi = ali[0].cloneNode(true);
+            _ul.appendChild(cloneLi);
+            //克隆最后一张图片，添加到图片队列的最前面
+            let cloneLastLi = ali[ali.length-1].cloneNode(true);
+                //插入方法1：
+//              _ul.insertBefore(cloneLastLi,ali[0]);
+                //插入方法2
+            _ul.prepend(cloneLastLi);
+            
+            //点击右边按钮
+            next.addEventListener("click",()=>{
+                if(isTransitioned){
+                    index++;//先++再设置
+                    move();
+                    fenyeq(index);  
+                }
+            })
+            
+            
+            //初始化图片队列：
+            _ul.style.transform="translateX("+(-imgW*index)+"px)";
+            //点击左边按钮
+            pre.addEventListener("click",()=>{
+                if(isTransitioned){
+                    index--;
+                    move();
+                    fenyeq(index);
+                }
+            })
+            
+            setInterval(function(){
+                if(isTransitioned){
+                    index++;
+                    move();
+                    fenyeq(index);
+                }
+            },4000)
+            
+            //监听动画结束
+            _ul.addEventListener("transitionend",()=>{//给ul加了transi
+                if(index == aImg.length+1){//边界判断
+                    index = 1;
+                    _ul.classList.toggle("transi");//移除ul的transi
+                    _ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+                }
+                if(index==0){
+                    index=aImg.length;
+                    _ul.classList.toggle("transi");//移除ul的transi
+                    _ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+                }
+                isTransitioned = true;//每次动画结束都判断
+            })
+            
+            
+            //根据图片的张数生成分页器
+            for(let i=0;i<aImg.length;i++){
+                var newLi = document.createElement('li');
+                item.appendChild(newLi);
+            }
+            //第一个小圆点添加样式
+            item.children[0].classList.add('active');
+            //给分页器添加点击事件
+            for(let j=0;j<item.children.length;j++){
+                    item.children[j].addEventListener('click',()=>{
+                        for(let q=0;q<item.children.length;q++){
+                            item.children[q].classList.remove('active');
+                        }
+                        item.children[j].classList.add('active');
+                        index = j+1;
+                        _ul.classList.add('transi');
+                        _ul.style.transform="translateX("+(-imgW*index)+"px)";
+                    })
+                }
+            //点击左右按钮分页器跟随
+            function fenyeq(index){
+                for(let k=0;k<item.children.length;k++){
+                    item.children[k].classList.remove('active');
+                }
+                index = index -1;
+                index = index==item.children.length?0:index;//左按钮边界
+                index = index<0?item.children.length-1:index;//右按钮边界
+                item.children[index].classList.add('active');
+            }
+            
+            function move(){
+                _ul.classList.add("transi");
+                _ul.style.transform="translateX("+(-imgW*index)+"px)";
+                isTransitioned = false;
+            }
+    }
+
+        
+        
+        </script>
+</body>
+</html>
