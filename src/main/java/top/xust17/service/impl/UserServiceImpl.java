@@ -21,4 +21,8 @@ public class UserServiceImpl implements UserService {
     public void saveUser(User user) {
         System.out.println("业务层：保存所有账户");
     }
+
+    public User findByUserName(User user) {
+        return userDao.findByUserName(user);
+    }
 }

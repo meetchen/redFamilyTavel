@@ -18,7 +18,7 @@
     <!--配置视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix"  value=".jsp"/>
+        <property name="suffix"  value=".html"/>
     </bean>
     <!--过滤静态资源-->
     <mvc:resources location="/css/" mapping="/css/**" />
