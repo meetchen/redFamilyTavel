@@ -1,3 +1,4 @@
 /target/
 /.idea
-jdbcConfig.properties
+
+/src/main/resources/jdbcConfig.properties
