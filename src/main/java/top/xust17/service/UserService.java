@@ -6,9 +6,10 @@ import java.util.List;
 
 public interface UserService {
 
-    public List<User> findAll();
+    List<User> findAll();
 
-    public void saveUser(User user);
+    void saveUser(User user);
 
     User findByUserName(User user);
+
 }
