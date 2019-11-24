@@ -4,9 +4,21 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.xust17.domain.Result;
-
+/**
+ * @Description
+ * @Author Chen JiaChao
+ * @Date 2019-11-23 11:37:09
+ **/
 @ControllerAdvice
 public class BaseExceptionHandler {
+
+    /**
+     * @Description
+     * @Param:
+     * @Return:
+     * @Author: Chen JiaChao
+     * @Date: 2019/11/23 11:36
+     */
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Result error(Exception e) {
